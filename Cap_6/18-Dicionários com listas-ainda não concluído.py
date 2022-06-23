@@ -14,4 +14,10 @@ for operação in venda:
     print(f"{produto:12s}: {quantidade:3d} x {preço:6.2f} = {custo:6.2f}")
     estoque[produto][0] -= quantidade
     total += custo
-print(f" Custo total: {total:21.2f}\n") 
+print(f" Custo total: {total:21.2f}\n")
+print("Estoque: \n")
+for chave, dados in estoque.items():
+    print("Descrição: ", chave)
+    print("Quantidade: ", dados[0])
+    print(f"Preço: {dados[1]:6.2f}\n")
+    
